@@ -11,9 +11,9 @@ var canvasY = 400;
  function setup() {
    createCanvas(canvasX, canvasY);
    this.pos = createVector(10, height - 50);
-   img = loadImage('b21super.png');
+   img = loadImage('spitfiregood.png');
    img2 = loadImage('bullte.png');
-   img3 = loadImage('battle.jpg');
+   img3 = loadImage('battle.png');
    man = new Person(img);
    button = createButton('restart');
    button.position(canvasX/2, man.pos.y + 55);
