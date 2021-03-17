@@ -1,2 +1,2 @@
-# side-scroller
-it in the name
+# Spitfire Guantlet
+a side scroller assault game
