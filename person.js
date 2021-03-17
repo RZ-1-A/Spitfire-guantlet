@@ -1,5 +1,5 @@
 function Person(img) {
-  img = loadImage('b21super.png')
+  img = loadImage('spitfiregood.png')
   this.pos = createVector(-11101, height - 50);
   this.vel = createVector(0, 0);
   this.acc = createVector(0, 0);
