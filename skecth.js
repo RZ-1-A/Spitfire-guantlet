@@ -9,6 +9,7 @@
 
 
 
+
  function setup() {
    createCanvas(canvasX, canvasY);
    this.pos = createVector(10, height - 50);
@@ -16,7 +17,7 @@
    img2 = loadImage('bullte.png');
    img3 = loadImage('battle.jpg');
    man = new Person(img);
-   button = createButton('restart');
+   button = createButton("Let's Go!");
    button.position(canvasX / 2, man.pos.y + 55);
    button.mousePressed(restart);
    for (var i = 0; i < 10100; i = i + 5) {
@@ -33,6 +34,8 @@
  function restart() {
    man.pos.x = 10;
    man.pos.y = 350;
+   man.vel.x = 3
+   
   
 
 
@@ -41,15 +44,26 @@
 
  function draw() {
 
+   
    if (man.pos.x <= -10 && man.pos.x >= -11000) {
      fill(0, 0, 0);
      rect(0, 0, canvasX, canvasY);
      fill(255, 0, 0);
      textSize(50);
-     text('Game Over', canvasX / 3 - 15, 220);
+     text('New Plane?', canvasX / 3 - 15, 220);
      textSize(50);
 
-   } else {
+   }else if (man.pos.x<= -110000){
+  fill(0,0,0)
+rect(0,0,canvasX,canvasY)
+    fill(255, 0, 0);
+     textSize(50);
+     text('The Battle Is Lost', canvasX / 5 - 15, 220);
+     textSize(50);
+  man.vel.y=0
+  man.vel.x=0
+      
+}  else {
      background(img3);
  
 
@@ -75,8 +89,9 @@
      man.update();
      man.edges();
      man.display();
+     // man.planes(canvasX,canvasY);
 
-     if (man.pos.x <= -11000) {
+     if (man.pos.x <= -11000 && man.pos.x >= -101000) {
        fill(255, 255, 255)
        rect(man.pos.x, 0, canvasX, canvasY)
        sira = createButton('start');
@@ -85,8 +100,8 @@
        man.vel.x = 0
        fill(0, 0, 0)
        textSize(25)
-       text('Press the spacebar to jump', man.pos.x + 10, 240)
-       text('Press the left mouse button to glide', man.pos.x + 90, 160)
+       text('W and S is up and down', man.pos.x + 10, 240)
+       text('A is slow down, D is speed up', man.pos.x + 90, 160)
 
      }
 
@@ -106,4 +121,3 @@
    }
 
  }
-
