@@ -15,7 +15,7 @@
    this.pos = createVector(10, height - 50);
    img = loadImage('spitfiregood.png');
    img2 = loadImage('bullte.png');
-   img3 = loadImage('battle.png');
+   img3 = loadImage('battle.jpg');
    man = new Person(img);
    button = createButton("Let's Go!");
    button.position(canvasX / 2, man.pos.y + 55);
