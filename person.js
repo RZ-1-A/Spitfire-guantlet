@@ -27,8 +27,8 @@ function Person(img) {
     textSize(18)
     text('Planes Lost: ' + ded, this.pos.x + (canvasX-150), 20)
     var score = this.pos.x-300;
-    if (score <0){score=0}
-       if (score >= 9745){  
+    if (score < 0){score = 0}
+       if (score >= 9751){  
  score = (highScore + score)
       }
     if (score > highScore) {highScore=score}
